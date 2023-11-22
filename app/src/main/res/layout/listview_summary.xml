@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+
+    >
+        <TextView
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_class_room_summary"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "0.5"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5dp"            android:textSize="16sp"
+
+            android:text = "lớp"
+            android:singleLine = "true" />
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_diem_std"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"            android:textSize="16sp"
+
+            android:padding = "5dp"
+            android:text = "STD"
+            android:singleLine = "true" />
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_diem_tpt"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5dp"            android:textSize="16sp"
+
+            android:text = "TPT"
+            android:singleLine = "true" />
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_diem_ntvt"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5dp"            android:textSize="16sp"
+
+            android:text = "Điểm người tốt\nviệc tốt"
+            />
+        <TextView
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_diem_phong_trao"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"            android:textSize="16sp"
+
+            android:padding = "5dp"
+            android:text = "Điểm phong trào"
+            />
+        <TextView
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_diem_doc_sach"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:textSize="16sp"
+            android:padding = "5dp"
+            android:text = "Điểm đọc sách"
+            />
+        <TextView
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_tong_diem"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:text="Tổng"
+            android:padding = "5dp"
+            android:singleLine = "true" />
+        <TextView
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_xep_hang"
+            android:layout_width = "0dp"
+            android:text="Hạng"
+
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5dp"
+            android:singleLine = "true" />
+        <TextView
+            android:textColor="#268E00"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_tuyen_duong"
+            android:text="tuyên duong"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "0.6"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5dp"
+            android:singleLine = "true" />
+        <TextView
+            android:textSize="18sp"
+            android:textColor="#FF0000"
+            android:gravity="center_horizontal"
+            android:id = "@+id/tv_student_tuyen_duong"
+            android:layout_width = "0dp"
+            android:layout_height = "match_parent"
+            android:layout_weight = "2.5"
+            android:background = "@drawable/cell_shape"
+            android:ellipsize = "end"
+            android:padding = "5dp"
+            android:singleLine = "true" />
+</LinearLayout>

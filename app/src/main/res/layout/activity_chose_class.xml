@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.quanlytrucnhat.ChooseClassActivity">
+
+    <Button
+        android:id="@+id/btn_back_choose_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginRight="12dp"
+        android:backgroundTint="@color/button"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:text="Quay lại"
+        android:textSize="@dimen/text_size_default_min"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/lv_choose_class_room"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/button" />
+</LinearLayout>
