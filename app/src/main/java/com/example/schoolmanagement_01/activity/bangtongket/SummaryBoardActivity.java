@@ -111,11 +111,6 @@ public class SummaryBoardActivity extends AppCompatActivity {
         for(int i=0; i<arr.length; i++){
             summaryDTOList.get(i).setHang(String.valueOf(map.get(arr[i])));
         }
-        for (int i = 0; i < summaryDTOList.size(); i++) {
-            if(Integer.valueOf(summaryDTOList.get(i).getHang()) == 1){
-                summaryDTOList.get(i).setTuyenDuong(true);
-            }
-        }
         summaryBoardAdapter = new SummaryBoardAdapter(getApplicationContext(),0, summaryDTOList);
         lvSummary.setAdapter(summaryBoardAdapter);
     }

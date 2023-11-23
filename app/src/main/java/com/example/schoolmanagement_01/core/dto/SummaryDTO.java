@@ -6,21 +6,15 @@ public class SummaryDTO {
 
     private String classRoom;
 
-    private String diemSTD;
+    private String neNep;
 
-    private String diemTPT;
+    private String diemCong;
 
-    private String diemNTVT;
-
-    private String diemPhongTrao;
-
-    private String diemDocSach;
+    private String xepLoai;
 
     private String tongDiem;
 
     private String hang;
-
-    private Boolean tuyenDuong;
 
     private String hocSinhTuyenDuong;
 
@@ -43,46 +37,6 @@ public class SummaryDTO {
         this.classRoom = classRoom;
     }
 
-    public String getDiemSTD() {
-        return diemSTD;
-    }
-
-    public void setDiemSTD(String diemSTD) {
-        this.diemSTD = diemSTD;
-    }
-
-    public String getDiemTPT() {
-        return diemTPT;
-    }
-
-    public void setDiemTPT(String diemTPT) {
-        this.diemTPT = diemTPT;
-    }
-
-    public String getDiemNTVT() {
-        return diemNTVT;
-    }
-
-    public void setDiemNTVT(String diemNTVT) {
-        this.diemNTVT = diemNTVT;
-    }
-
-    public String getDiemPhongTrao() {
-        return diemPhongTrao;
-    }
-
-    public void setDiemPhongTrao(String diemPhongTrao) {
-        this.diemPhongTrao = diemPhongTrao;
-    }
-
-    public String getDiemDocSach() {
-        return diemDocSach;
-    }
-
-    public void setDiemDocSach(String diemDocSach) {
-        this.diemDocSach = diemDocSach;
-    }
-
     public String getTongDiem() {
         return tongDiem;
     }
@@ -99,13 +53,6 @@ public class SummaryDTO {
         this.hang = hang;
     }
 
-    public Boolean getTuyenDuong() {
-        return tuyenDuong;
-    }
-
-    public void setTuyenDuong(Boolean tuyenDuong) {
-        this.tuyenDuong = tuyenDuong;
-    }
 
     public String getHocSinhTuyenDuong() {
         return hocSinhTuyenDuong;
@@ -113,5 +60,29 @@ public class SummaryDTO {
 
     public void setHocSinhTuyenDuong(String hocSinhTuyenDuong) {
         this.hocSinhTuyenDuong = hocSinhTuyenDuong;
+    }
+
+    public String getNeNep() {
+        return neNep;
+    }
+
+    public void setNeNep(String neNep) {
+        this.neNep = neNep;
+    }
+
+    public String getDiemCong() {
+        return diemCong;
+    }
+
+    public void setDiemCong(String diemCong) {
+        this.diemCong = diemCong;
+    }
+
+    public String getXepLoai() {
+        return xepLoai;
+    }
+
+    public void setXepLoai(String xepLoai) {
+        this.xepLoai = xepLoai;
     }
 }

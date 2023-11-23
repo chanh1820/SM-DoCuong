@@ -8,13 +8,9 @@ public class PointDTO {
 
     private String classRoom;
 
-    private Integer soTiet;
-
     private Integer diemNguoiTotViecTot;
 
     private Integer diemPhongTrao;
-
-    private Integer diemDocSach;
 
     private String tenTuyenDuong;
 
@@ -46,14 +42,6 @@ public class PointDTO {
         this.week = week;
     }
 
-    public Integer getSoTiet() {
-        return soTiet;
-    }
-
-    public void setSoTiet(Integer soTiet) {
-        this.soTiet = soTiet;
-    }
-
     public Integer getDiemNguoiTotViecTot() {
         return diemNguoiTotViecTot;
     }
@@ -68,14 +56,6 @@ public class PointDTO {
 
     public void setDiemPhongTrao(Integer diemPhongTrao) {
         this.diemPhongTrao = diemPhongTrao;
-    }
-
-    public Integer getDiemDocSach() {
-        return diemDocSach;
-    }
-
-    public void setDiemDocSach(Integer diemDocSach) {
-        this.diemDocSach = diemDocSach;
     }
 
     public String getTenTuyenDuong() {

@@ -37,33 +37,24 @@ public class SummaryBoardAdapter extends ArrayAdapter<SummaryDTO> {
         }
 
         TextView tvClassRoom = convertView.findViewById(R.id.tv_class_room_summary);
-        TextView tvDiemSTD = convertView.findViewById(R.id.tv_diem_std);
-        TextView tvDiemTPT = convertView.findViewById(R.id.tv_diem_tpt);
-        TextView tvDiemNTVT = convertView.findViewById(R.id.tv_diem_ntvt);
-        TextView tvDiemPhongTrao = convertView.findViewById(R.id.tv_diem_phong_trao);
-        TextView tvDiemDocSach = convertView.findViewById(R.id.tv_diem_doc_sach);
-        TextView tvTuyenDuong = convertView.findViewById(R.id.tv_tuyen_duong);
+        TextView tvNeNep = convertView.findViewById(R.id.tv_ne_nep);
+        TextView tvDiemCong = convertView.findViewById(R.id.tv_diem_cong);
         TextView tvStudentTuyenDuong = convertView.findViewById(R.id.tv_student_tuyen_duong);
         TextView tvTong = convertView.findViewById(R.id.tv_tong_diem);
+        TextView tvXepLoai = convertView.findViewById(R.id.tv_xep_loai);
         TextView tvHang = convertView.findViewById(R.id.tv_xep_hang);
 
 
         SummaryDTO summaryDTO = getItem(position);
         tvClassRoom.setText(summaryDTO.getClassRoom());
-        tvDiemSTD.setText(summaryDTO.getDiemSTD());
-        tvDiemTPT.setText(summaryDTO.getDiemTPT());
-        tvDiemNTVT.setText(summaryDTO.getDiemNTVT());
-        tvDiemPhongTrao.setText(summaryDTO.getDiemPhongTrao());
-        tvDiemDocSach.setText(summaryDTO.getDiemDocSach());
+        tvNeNep.setText(summaryDTO.getNeNep());
+        tvDiemCong.setText(summaryDTO.getDiemCong());
+        tvXepLoai.setText(summaryDTO.getXepLoai());
         tvStudentTuyenDuong.setText(summaryDTO.getHocSinhTuyenDuong());
         tvTong.setText(summaryDTO.getTongDiem());
         tvHang.setText(summaryDTO.getHang());
 
-        if(summaryDTO.getTuyenDuong()==Boolean.TRUE){
-            tvTuyenDuong.setText("✔");
-        }else {
-            tvTuyenDuong.setText("");
-        }
+
         return convertView;
     }
 }

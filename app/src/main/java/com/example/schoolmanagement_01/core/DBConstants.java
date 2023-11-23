@@ -14,9 +14,17 @@ public class DBConstants {
     /**
      * type
      */
-    public static final String RULE_GROUP_CODE_STD = "STD";
-
-    public static final String RULE_GROUP_CODE_TPT = "TPT";
+    public static final String RULE_GROUP_DI_HOC = "1";
+    public static final String RULE_GROUP_VE_SINH = "2";
+    public static final String RULE_GROUP_CHAM_SOC_HOA = "3";
+    public static final String RULE_GROUP_TRUY_BAI = "4";
+    public static final String RULE_GROUP_DE_XE = "5";
+    public static final String RULE_GROUP_TAP_THE_DUC = "6";
+    public static final String RULE_GROUP_HAT = "7";
+    public static final String RULE_GROUP_TAP_TRUNG = "8";
+    public static final String RULE_GROUP_NEP_SONG_VAN_MINH = "9";
+    public static final String RULE_GROUP_BAO_VE_CONG_CHUNG = "10";
+    public static final String RULE_GROUP_CO_DO = "11";
 
     public static final Integer POINT_ONE_LESSION = 50;
 
@@ -64,66 +72,93 @@ public class DBConstants {
      * listRuleDTO
      */
     public static final List<RuleDTO> listRuleDTO = new ArrayList<RuleDTO>() {{
-        add(new RuleDTO(1, 0, "Học tập", 2));
-        add(new RuleDTO(2, 1, "Không thuộc bài", -2, "1", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(3, 1, "Không chép bài", -2, "1", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(4, 1, "Không soạn bài", -2, "1", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(5, 1, "Không làm bài", -2, "1", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(6, 1, "Không làm bài", -2, "1", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(7, 1, "Không mang dụng cụ học tập", -2, "1", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(8, 1, "Lớp thụ động", -3, "1", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(8, 1, "Học sinh không tích cực tham gia phát biểu", -3, "1", RULE_GROUP_CODE_TPT));
+        add(new RuleDTO(1, 0, "Đi học", 2));
+        add(new RuleDTO(2, 1, "Đi học muộn", -2, "1", RULE_GROUP_DI_HOC));
+        add(new RuleDTO(3, 1, "Bỏ giờ, bỏ tiết", -5, "1", RULE_GROUP_DI_HOC));
+        add(new RuleDTO(4, 1, "Nghỉ học không lí do", -2, "1", RULE_GROUP_DI_HOC));
 
-        add(new RuleDTO(9, 0, "Thái độ", 4));
-        add(new RuleDTO(11, 9, "Trả treo", -5, "2", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(11, 9, "Nói leo", -5, "2", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(11, 9, "Vô lễ với giáo viên", -5, "2", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(12, 9, "Lớp còn ồn, mất trật tự trong tiết học", -3, "2", RULE_GROUP_CODE_TPT));
+        add(new RuleDTO(5, 0, "Vệ sinh", 4));
+        add(new RuleDTO(6, 5, "Vứt rác xuống tầng dưới, mái nhà", -10, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(7, 5, "Để rác cuối lớp", -5, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(8, 5, "Vệ sinh muộn", -5, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(9, 5, "Không vệ sinh", -10, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(10, 5, "Thiếu khăn chải bàn, khăn lau bảng, thau, thước kẻ, lọ hoa", -2, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(11, 5, "Không xóa bảng sạch", -2, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(12, 5, "Vứt giấy rác ra lớp, sân trường, viết bậy lên tường", -2, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(13, 5, "Hất nước xuống tấng dưới", -10, "2", RULE_GROUP_VE_SINH));
+        add(new RuleDTO(14, 5, "Vệ sinh bẩn", -2, "2", RULE_GROUP_VE_SINH));
 
-        add(new RuleDTO(13, 0, "Tác phong", 5));
-        add(new RuleDTO(14, 13, "Đến trễ sau khi lớp đã vào tiết học", -1, "3", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(15, 13, "Thiếu logo", -1, "3", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(16, 13, "Thiếu phù hiệu", -1, "3", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(17, 13, "Thiếu khăn quàng", -1, "3", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(18, 13, "Mang giày bata", -1, "3", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(19, 13, "Mặc quần áo không đúng quy định", -1, "3", RULE_GROUP_CODE_TPT));
+        add(new RuleDTO(15, 0, "Chăm sóc bồn hoa cây cảnh", 5));
+        add(new RuleDTO(16, 15, "Không nhặt lá, giấy rác", -2, "3", RULE_GROUP_CHAM_SOC_HOA));
+        add(new RuleDTO(17, 15, "Không tưới nước", -2, "3", RULE_GROUP_CHAM_SOC_HOA));
 
-        add(new RuleDTO(20, 0, "Vệ sinh", 5));
-        add(new RuleDTO(21, 20, "Vệ sinh trong phòng học không sạch, còn rác", -2, "4", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(22, 20, "Không lau bảng khi bắt đầu tiết học", -2, "4", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(23, 20, "Không có khảm tải bàn", -2, "4", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(24, 20, "Khảm trải bàn không ngay ngắn", -2, "4", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(25, 20, "Không có phấn, bông lau bảng", -2, "4", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(26, 20, "Không có bình hoa trên bàn giáo viên", -2, "4", RULE_GROUP_CODE_TPT));
+        add(new RuleDTO(18, 0, "Truy bài", 5));
+        add(new RuleDTO(19, 18, "Vào lớp muộn", -2, "4", RULE_GROUP_TRUY_BAI));
+        add(new RuleDTO(20, 18, "Nói chuyện riêng", -2, "4", RULE_GROUP_TRUY_BAI));
+        add(new RuleDTO(21, 18, "Không mở sách vở", -2, "4", RULE_GROUP_TRUY_BAI));
+        add(new RuleDTO(22, 18, "Đi lại lộn xộn", -2, "4", RULE_GROUP_TRUY_BAI));
 
-        add(new RuleDTO(27, 16, "Hành lang còn rác sau khi lớp tan tiết cuối ra về", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(28, 27, "Trong phòng học còn rác sau khi lớp tan tiết cuối ra về", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(29, 27, "Hộc bàn còn rác sau khi lớp tan tiết cuối ra về", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(30, 27, "Phía sau phòng học vẫn còn rác", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(31, 27, "Lớp tan tiết cuối ra về nhưng chưa chưa đổ rác", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(32, 27, "Lớp tan tiết cuối ra về nhưng chưa chưa lau bảng", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(33, 27, "Lớp tan tiết cuối ra về nhưng chưa chưa tắt đèn", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(34, 27, "Lớp tan tiết cuối ra về nhưng chưa chưa tắt quạt", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(35, 27, "Lớp tan tiết cuối ra về nhưng chưa không đóng cửa sổ", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(36, 27, "Lớp có học sinh mang đồ ăn vào phòng học", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(37, 27, "Lớp có học sinh quà bánh vào phòng học", -5, "4", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(38, 27, "Lớp có học sinh mang nước uống vào phòng học", -5, "4", RULE_GROUP_CODE_STD));
+        add(new RuleDTO(23, 0, "Đi và để xe", -5, "4", RULE_GROUP_DE_XE));
+        add(new RuleDTO(24, 23, "Để sai vị trí", -2, "4", RULE_GROUP_DE_XE));
+        add(new RuleDTO(25, 23, "Không vệ sinh nhà xe", -5, "4", RULE_GROUP_DE_XE));
+        add(new RuleDTO(26, 23, "Ra về đứng ngoài cổng", -5, "4", RULE_GROUP_DE_XE));
+        add(new RuleDTO(27, 23, "Hàng xe không thẳng", -5, "4", RULE_GROUP_DE_XE));
+        add(new RuleDTO(28, 23, "Để xe ngoài cổng", -20, "4", RULE_GROUP_DE_XE));
+        add(new RuleDTO(29, 23, "Đi xe máy điện đến trường", -30, "4", RULE_GROUP_DE_XE));
+        add(new RuleDTO(30, 23, "Đi xe trong sân trường ", -5, "4", RULE_GROUP_DE_XE));
 
-        add(new RuleDTO(39, 0, "Chuyên cần", 5));
-        add(new RuleDTO(40, 39, "Nghỉ học có phép", 0, "5", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(41, 39, "Nghỉ học không phép", 0, "5", RULE_GROUP_CODE_TPT));
-        add(new RuleDTO(42, 39, "Cúp tiết", 0, "5", RULE_GROUP_CODE_TPT));
+        add(new RuleDTO(31, 0, "Tập thể dục giữa giờ", 5));
+        add(new RuleDTO(32, 31, "Ra muộn sau 3 phút", -2, "5", RULE_GROUP_TAP_THE_DUC));
+        add(new RuleDTO(33, 31, "Tập sai, không đều", -2, "5", RULE_GROUP_TAP_THE_DUC));
+        add(new RuleDTO(34, 31, "Xếp hàng không thẳng", -2, "5", RULE_GROUP_TAP_THE_DUC));
+        add(new RuleDTO(35, 31, "Không có dầy hoặc dép có quai", -5, "5", RULE_GROUP_TAP_THE_DUC));
+        add(new RuleDTO(36, 31, "Không đội mũ ca nô", -2, "5", RULE_GROUP_TAP_THE_DUC));
+        add(new RuleDTO(37, 31, "Không sơ vin", -5, "5", RULE_GROUP_TAP_THE_DUC));
+        add(new RuleDTO(38, 31, "Bỏ tập thể dục", -5, "5", RULE_GROUP_TAP_THE_DUC));
 
-        add(new RuleDTO(43, 0, "Nề nếp", 5));
-        add(new RuleDTO(44, 43, "Lớp không xếp hàng sau khi nghe chuông báo tập trung 15 phút", -5, "6", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(45, 43, "Lớp không đứng xếp hàng tan tiết cuối ra về", -5, "6", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(46, 43, "Lớp không giữ được trật tự", -5, "6", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(47, 43, "Còn học sinh ở bên ngoài trong thời gian 15 phút đầu giờ", -5, "6", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(48, 43, "Lớp còn học sinh đi trễ trong 15 phút đầu giờ", -5, "6", RULE_GROUP_CODE_STD));
+        add(new RuleDTO(39, 0, "Hát", 5));
+        add(new RuleDTO(40, 39, "Không hát đều", -10, "6", RULE_GROUP_HAT));
+        add(new RuleDTO(41, 39, "Cả lớp không hát", -5, "6", RULE_GROUP_HAT));
+        add(new RuleDTO(42, 39, "Học sinh không hát", -2, "6", RULE_GROUP_HAT));
 
-        add(new RuleDTO(49, 0, "Giao thông", 5));
-        add(new RuleDTO(50, 49, "Lớp có học sinh không đội nón bảo hiểm", -5, "7", RULE_GROUP_CODE_STD));
-        add(new RuleDTO(51, 49, "Lớp có học sinh có đội nón bảo hiểm nhưng không cài quay đúng quy cách", -5, "7", RULE_GROUP_CODE_STD));
+        add(new RuleDTO(43, 0, "Tập trung (chào cờ, ngoại khóa)", 5));
+        add(new RuleDTO(44, 43, "Xếp hàng không thẳng", -2, "7", RULE_GROUP_TAP_TRUNG));
+        add(new RuleDTO(45, 43, "Mất trật tự", -2, "7", RULE_GROUP_TAP_TRUNG));
+        add(new RuleDTO(46, 43, "Không có ghế ngồi", -2, "7", RULE_GROUP_TAP_TRUNG));
+        add(new RuleDTO(47, 43, "Không có mũ ca nô", -2, "7", RULE_GROUP_TAP_TRUNG));
+        add(new RuleDTO(48, 43, "Không đi dầy, dép có quai", -5, "7", RULE_GROUP_TAP_TRUNG));
+        add(new RuleDTO(49, 43, "Ngồi không đúng vị trí", -2, "7", RULE_GROUP_TAP_TRUNG));
+        add(new RuleDTO(50, 43, "Ra muôn sau 3 phút", -2, "7", RULE_GROUP_TAP_TRUNG));
+
+        add(new RuleDTO(51, 0, "Nếp sống văn minh", 5));
+        add(new RuleDTO(52, 51, "Ăn quà vặt", -10, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(53, 51, "Sử dụng điện thoại", -30, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(54, 51, "Không có đồng phục", -2, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(55, 51, "Đánh nhau (Tùy mức độ, nặng có thể đuổi học)", -60, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(56, 51, "Ra ngoài cổng tự do", -20, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(57, 51, "Không sơ vin", -2, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(58, 51, "Không khăn quàng", -2, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(59, 51, "Lấy đồ của người khác", -20, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(60, 51, "Mang vũ khí, chất cấm, hút thuốc lá khi đến trường", -20, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(61, 51, "Đá bóng trong sân trường", -20, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(62, 51, "Đi tông, dép đến trường", -5, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+        add(new RuleDTO(63, 51, "Nói tục chửi bậy", -5, "7", RULE_GROUP_NEP_SONG_VAN_MINH));
+
+
+        add(new RuleDTO(64, 0, "Bảo vệ của công", 5));
+        add(new RuleDTO(65, 64, "Ra về không đóng cửa chính, cửa sổ", -20, "7", RULE_GROUP_BAO_VE_CONG_CHUNG));
+        add(new RuleDTO(66, 64, "Vẽ bậy lên bàn", -2, "7", RULE_GROUP_BAO_VE_CONG_CHUNG));
+        add(new RuleDTO(67, 64, "Đập phá bàn ghế, đồ dùng giảng dạy, học tập", -20, "7", RULE_GROUP_BAO_VE_CONG_CHUNG));
+        add(new RuleDTO(68, 64, "Bàn ghế không ngay ngắn, thẳng hàng, lộn xộn", -2, "7", RULE_GROUP_BAO_VE_CONG_CHUNG));
+        add(new RuleDTO(69, 64, "Ra về không tắt điện tắt quạt", -20, "7", RULE_GROUP_BAO_VE_CONG_CHUNG));
+
+        add(new RuleDTO(70, 0, "Cờ đỏ", 5));
+        add(new RuleDTO(71, 70, "Nộp sổ trực muộn", -2, "7", RULE_GROUP_CO_DO));
+        add(new RuleDTO(72, 70, "Không nộp sổ trực", -5, "7", RULE_GROUP_CO_DO));
+        add(new RuleDTO(73, 70, "Tính sai điểm sổ trực", -2, "7", RULE_GROUP_CO_DO));
+        add(new RuleDTO(74, 70, "Không tính điểm sổ trực", -2, "7", RULE_GROUP_CO_DO));
+        add(new RuleDTO(75, 70, "Thiếu điểm tiết học và chữ kí của giáo viên", -5, "7", RULE_GROUP_CO_DO));
+
     }};
 
     /**
@@ -187,7 +222,7 @@ public class DBConstants {
         add("Chiều");
     }};
 
-
+    public static final Integer DEFAULT_POINT_OF_WEEK = 420;
 //      public  static final  ArrayList<String> classRoomName = new ArrayList<String>(){{
 //            "6/1"
 //            ,"6/2"

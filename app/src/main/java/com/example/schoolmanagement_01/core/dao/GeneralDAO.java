@@ -72,10 +72,10 @@ public class GeneralDAO {
         ContentValues values= new ContentValues();
         values.put("week",pointDTO.getWeek());
         values.put("class_room",pointDTO.getClassRoom());
-        values.put("so_tiet",pointDTO.getSoTiet());
+        values.put("so_tiet",0);
         values.put("diem_ntvt",pointDTO.getDiemNguoiTotViecTot());
         values.put("diem_phong_trao",pointDTO.getDiemPhongTrao());
-        values.put("diem_doc_sach",pointDTO.getDiemDocSach());
+        values.put("diem_doc_sach",0);
         values.put("hoc_sinh_tuyen_duong",pointDTO.getTenTuyenDuong());
         Long id = db.insert("point_tbl", null, values);
         db.close();
@@ -130,10 +130,10 @@ public class GeneralDAO {
                 item = new PointDTO();
                 item.setWeek(cursor.getString(1));
                 item.setClassRoom(cursor.getString(2));
-                item.setSoTiet(cursor.getInt(3));
+//                item.setSoTiet(cursor.getInt(3));
                 item.setDiemNguoiTotViecTot(cursor.getInt(4));
                 item.setDiemPhongTrao(cursor.getInt(5));
-                item.setDiemDocSach(cursor.getInt(6));
+//                item.setDiemDocSach(cursor.getInt(6));
                 item.setTenTuyenDuong(cursor.getString(7));
             } while (cursor.moveToNext());
         }else {

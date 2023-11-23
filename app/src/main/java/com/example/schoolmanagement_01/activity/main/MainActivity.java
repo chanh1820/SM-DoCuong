@@ -1,5 +1,6 @@
 package com.example.schoolmanagement_01.activity.main;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Spinner;
 import android.widget.TextClock;
+import android.widget.Toast;
 
 import com.example.schoolmanagement_01.R;
 import com.example.schoolmanagement_01.activity.bangtongket.SummaryBoardActivity;
@@ -26,6 +28,10 @@ import com.example.schoolmanagement_01.activity.diemxeploaitiethoc.AddPointActiv
 import com.example.schoolmanagement_01.activity.quanlytrucnhat.ChooseClassActivity;
 import com.example.schoolmanagement_01.core.DBConstants;
 import com.example.schoolmanagement_01.core.DBHelper;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.IOException;
 import java.util.List;
@@ -58,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         yearSPr = getSharedPreferences("year",MODE_PRIVATE);
         initView();
         action();
-
+        firebase();
         /**sp_namhoc = (Spinner) findViewById(R.id.spin_namhoc);
         //lấy các giá trị của namhoc vào adapter
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, namhoc);
@@ -195,5 +201,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+    private void firebase() {
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth.signInWithEmailAndPassword("sm_docuong@gmail.com", "123456")
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                        }else {
+                            finish();
+                        }
+                    }
+                });
     }
 }

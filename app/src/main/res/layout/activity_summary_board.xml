@@ -51,6 +51,7 @@
         android:id="@+id/relativeLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:background="#004f91">
 
         <TextView
@@ -68,7 +69,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="5dp"
-            android:text="STD"
+            android:text="Nề nếp"
             android:textColor="#ffffff" />
 
         <TextView
@@ -77,35 +78,9 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="5dp"
-            android:text="TPT"
+            android:text="Điểm cộng"
             android:textColor="#ffffff" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Điểm người tốt việc tốt"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Điểm phong trào"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Điểm đọc sách"
-            android:textColor="#ffffff" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -120,7 +95,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Hạng"
+            android:text="Xếp loại"
             android:textColor="#ffffff" />
         <TextView
             android:layout_width="0dp"
@@ -128,7 +103,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Tuyên dương"
+            android:text="Hạng"
             android:textColor="#ffffff" />
         <TextView
             android:layout_width="0dp"
@@ -136,7 +111,7 @@
             android:layout_weight="2.5"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Tuyên dương\nHọc Sinh"
+            android:text="Tuyên dương"
             android:textColor="#ffffff" />
     </LinearLayout>
 

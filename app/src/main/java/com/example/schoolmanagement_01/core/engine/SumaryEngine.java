@@ -18,48 +18,38 @@ public class SumaryEngine {
 
     public static SummaryDTO calculatorSummary(String classRoom, PointDTO pointDTO, List<ReportDTO> reportDTOList) {
         SummaryDTO summaryDTO = new SummaryDTO();
+        summaryDTO.setClassRoom(classRoom);
         if(pointDTO == null){
-            summaryDTO.setClassRoom(classRoom);
-            summaryDTO.setDiemSTD("");
-            summaryDTO.setDiemTPT("");
-            summaryDTO.setDiemNTVT("");
-            summaryDTO.setDiemPhongTrao("");
-            summaryDTO.setDiemDocSach("");
+            summaryDTO.setNeNep("");
+            summaryDTO.setDiemCong("");
+            summaryDTO.setXepLoai("");
             summaryDTO.setTongDiem("0");
             summaryDTO.setHocSinhTuyenDuong("");
             return summaryDTO;
         }
-        float totalPointSTD = DBConstants.POINT_ONE_LESSION * pointDTO.getSoTiet();//1000
-        float totalPointTPT = DBConstants.POINT_ONE_LESSION * pointDTO.getSoTiet();//1000
         // calculator Diem
-
+        Integer total = DBConstants.DEFAULT_POINT_OF_WEEK;
+        Integer pointMinus = 0;
+        Integer diemCong = pointDTO.getDiemNguoiTotViecTot() + pointDTO.getDiemPhongTrao();
         for (ReportDTO item: reportDTOList) {
-            switch (item.getGroupCode()){
-                case DBConstants.RULE_GROUP_CODE_STD:
-                    totalPointSTD -= Math.abs(item.getMinusPoint());
-                    break;
-                case DBConstants.RULE_GROUP_CODE_TPT:
-                    totalPointTPT -= Math.abs(item.getMinusPoint());
-                    break;
-                default:
-                    Log.e("not found", item.getGroupCode());
-                    break;
-            }
+            total -= Math.abs(item.getMinusPoint());
+            pointMinus -= Math.abs(item.getMinusPoint());
         }
-        float pointSTD = totalPointSTD / DBConstants.POINT_ONE_LESSION;
-        float pointTPT = totalPointTPT / DBConstants.POINT_ONE_LESSION;
-        float tongDiem = pointSTD+ pointTPT + pointDTO.getDiemNguoiTotViecTot() + pointDTO.getDiemDocSach() + pointDTO.getDiemPhongTrao();
-        Log.e("pointSTD", String.valueOf(pointSTD));
-        Log.e("pointTPT", String.valueOf(pointTPT));
-        Log.e("tongDiem", String.valueOf(tongDiem));
-        summaryDTO.setClassRoom(classRoom);
-        summaryDTO.setDiemSTD(String.format("%.2f", pointSTD));
-        summaryDTO.setDiemTPT(String.format("%.2f", pointTPT));
-        summaryDTO.setDiemNTVT(pointDTO.getDiemNguoiTotViecTot().toString());
-        summaryDTO.setDiemPhongTrao(pointDTO.getDiemPhongTrao().toString());
-        summaryDTO.setDiemDocSach(pointDTO.getDiemDocSach().toString());
+        total += diemCong;
         summaryDTO.setHocSinhTuyenDuong(pointDTO.getTenTuyenDuong().toString());
-        summaryDTO.setTongDiem(String.format("%.2f", tongDiem));
+        summaryDTO.setNeNep(String.valueOf(pointMinus));
+        summaryDTO.setDiemCong(String.valueOf(diemCong));
+        summaryDTO.setTongDiem(String.valueOf(total));
+        summaryDTO.setHocSinhTuyenDuong(pointDTO.getTenTuyenDuong());
+        if(total > 410){
+            summaryDTO.setXepLoai("Tốt");
+        }else if (total>400 && total < 409 ){
+            summaryDTO.setXepLoai("Khá");
+        }else if (total>350 && total < 399 ){
+            summaryDTO.setXepLoai("Trung bình");
+        }else if (total<350 ){
+            summaryDTO.setXepLoai("Yếu");
+        }
         return summaryDTO;
     }
 }

@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TRƯỜNG THCS THỚI THUẬN"
+            android:text="TRƯỜNG THCS XUÂN CẨM"
             android:textColor="@android:color/holo_red_light"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -128,8 +128,9 @@
                 android:id="@+id/btn_quan_ly_truc_nhat"
                 android:layout_width="160dp"
                 android:layout_height="150dp"
-                android:backgroundTint="@color/button"
                 android:gravity="center"
+                android:backgroundTint="@android:color/holo_red_light"
+
                 android:text="Quản lý trực tuần"
                 android:textColor="@color/design_default_color_on_primary"
                 android:textSize="18sp"
@@ -140,8 +141,8 @@
                 android:layout_width="160dp"
                 android:layout_height="150dp"
                 android:layout_marginLeft="8dp"
-                android:backgroundTint="@color/button"
                 android:gravity="center"
+                android:backgroundTint="@android:color/holo_green_light"
                 android:text="Xếp loại tiết học"
                 android:textColor="@color/design_default_color_on_primary"
                 android:textSize="20sp"
@@ -160,11 +161,11 @@
                     android:id="@+id/btn_danh_sach_vi_pham"
                     android:layout_width="160dp"
                     android:layout_height="150dp"
-                    android:backgroundTint="@color/button"
                     android:gravity="center"
                     android:text="Thống kê từng lớp"
                     android:textColor="@color/design_default_color_on_primary"
                     android:textSize="20sp"
+                    android:backgroundTint="@android:color/holo_blue_light"
                     android:textStyle="bold" />
 
                 <Button
@@ -172,7 +173,7 @@
                     android:layout_width="160dp"
                     android:layout_height="150dp"
                     android:layout_marginLeft="8dp"
-                    android:backgroundTint="@color/button"
+                    android:backgroundTint="@android:color/holo_orange_light"
                     android:gravity="center"
                     android:text="Bảng tổng kết tuần"
                     android:textColor="@color/design_default_color_on_primary"

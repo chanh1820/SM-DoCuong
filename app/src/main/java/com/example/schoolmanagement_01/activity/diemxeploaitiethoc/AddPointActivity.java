@@ -27,7 +27,7 @@ import java.util.List;
 public class AddPointActivity extends AppCompatActivity {
     Button btnSavePoint, btnDelete, btnBack;
     Spinner spnChooseClassRoomAddPoint,spnChooseWeekAddPoint;
-    EditText edtSoTiet, edtDiemNTVT, edtDiemPhongTrao, edtDiemDocSach, edtHocSinhTuyenDuong;
+    EditText edtDiemNTVT, edtDiemPhongTrao, edtHocSinhTuyenDuong;
     PointDTO pointDTO = new PointDTO();
     List<String> listWeek = DBConstants.listWeek;
     List<String> listClassRoom = DBConstants.listClassRoom;
@@ -50,25 +50,19 @@ public class AddPointActivity extends AppCompatActivity {
         btnSavePoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String soTiet = edtSoTiet.getText().toString().trim();
                 String ntvt = edtDiemNTVT.getText().toString().trim();
                 String phongTrao = edtDiemPhongTrao.getText().toString().trim();
-                String docSach = edtDiemDocSach.getText().toString().trim();
                 String hocSinhTuyenDuong = edtHocSinhTuyenDuong.getText().toString().trim();
                 try{
-                    pointDTO.setSoTiet(Integer.valueOf(soTiet));
                     pointDTO.setDiemNguoiTotViecTot(Integer.valueOf(ntvt));
                     pointDTO.setDiemPhongTrao(Integer.valueOf(phongTrao));
-                    pointDTO.setDiemDocSach(Integer.valueOf(docSach));
                     pointDTO.setTenTuyenDuong(hocSinhTuyenDuong);
                 }catch (Exception e) {
                     Toast.makeText(getApplicationContext(), "Xin mời nhập số", Toast.LENGTH_LONG).show();
 
                 }
-                if(UltilService.isNumeric(soTiet)
-                    && UltilService.isNumeric(ntvt)
-                    && UltilService.isNumeric(phongTrao)
-                    && UltilService.isNumeric(docSach)){
+                if(UltilService.isNumeric(ntvt)
+                    && UltilService.isNumeric(phongTrao)){
                     Long respon = generalDAO.savePoint(pointDTO);
                     if(respon!=Long.valueOf(-1)){
                         Toast toast = Toast.makeText(getApplicationContext(), "Lưu thành công", Toast.LENGTH_LONG);
@@ -99,10 +93,8 @@ public class AddPointActivity extends AppCompatActivity {
         btnSavePoint = findViewById(R.id.btn_save_point);
         spnChooseWeekAddPoint = findViewById(R.id.spn_choose_week_add_point);
         spnChooseClassRoomAddPoint = findViewById(R.id.spn_choose_class_room_add_point);
-        edtSoTiet = findViewById(R.id.edt_add_point_so_tiet);
         edtDiemNTVT = findViewById(R.id.edt_add_point_diem_ntvt);
         edtDiemPhongTrao = findViewById(R.id.edt_add_point_diem_phong_trao);
-        edtDiemDocSach = findViewById(R.id.edt_add_point_diem_doc_sach);
         edtHocSinhTuyenDuong = findViewById(R.id.edt_add_point_doc_sinh_tuyen_duong);
         btnBack = findViewById(R.id.btn_back_add_point);
         btnBack.setOnClickListener(new View.OnClickListener() {
