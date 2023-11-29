@@ -33,18 +33,23 @@ public class DBConstants {
      * classRoomDTOS
      */
     public static final ArrayList<ClassRoomDTO> classRoomDTOS = new ArrayList<ClassRoomDTO>() {{
-        add(new ClassRoomDTO(1, "0601", "6/1"));
-        add(new ClassRoomDTO(2, "0602", "6/2"));
-        add(new ClassRoomDTO(3, "0603", "6/3"));
-        add(new ClassRoomDTO(4, "0604", "6/4"));
-        add(new ClassRoomDTO(6, "0701", "7/1"));
-        add(new ClassRoomDTO(7, "0702", "7/2"));
-        add(new ClassRoomDTO(8, "0703", "7/3"));
-        add(new ClassRoomDTO(9, "0801", "8/1"));
-        add(new ClassRoomDTO(9, "0802", "8/2"));
-        add(new ClassRoomDTO(9, "0901", "9/1"));
-        add(new ClassRoomDTO(9, "0902", "9/2"));
-        add(new ClassRoomDTO(9, "0903", "9/3"));
+        add(new ClassRoomDTO(1, "0", "6A1"));
+        add(new ClassRoomDTO(2, "0", "6A2"));
+        add(new ClassRoomDTO(3, "0", "6A3"));
+        add(new ClassRoomDTO(4, "0", "6A4"));
+        add(new ClassRoomDTO(6, "0", "6A5"));
+        add(new ClassRoomDTO(7, "0", "7A1"));
+        add(new ClassRoomDTO(8, "0", "7A2"));
+        add(new ClassRoomDTO(9, "0", "7A3"));
+        add(new ClassRoomDTO(9, "0", "7A4"));
+        add(new ClassRoomDTO(9, "0", "8A1"));
+        add(new ClassRoomDTO(9, "0", "8A2"));
+        add(new ClassRoomDTO(9, "0", "8A3"));
+        add(new ClassRoomDTO(9, "0", "9A1"));
+        add(new ClassRoomDTO(9, "0", "9A2"));
+        add(new ClassRoomDTO(9, "0", "9A3"));
+        add(new ClassRoomDTO(9, "0", "9A4"));
+        add(new ClassRoomDTO(9, "0", "9A5"));
     }};
     public static final ArrayList<String> listClassRoom = new ArrayList<String>() {{
         for (ClassRoomDTO classRoomDTO : classRoomDTOS) {
@@ -53,20 +58,25 @@ public class DBConstants {
     }};
 
     public static final List<String> listClassSang = new ArrayList<String>() {{
-        add("6/1");
-        add("6/2");
-        add("6/3");
-        add("6/4");
-        add("9/1");
-        add("9/2");
-        add("9/3");
+        add("6A1");
+        add("6A2");
+        add("6A3");
+        add("6A4");
+        add("6A5");
+        add("9A1");
+        add("9A2");
+        add("9A3");
+        add("9A4");
+        add("9A5");
     }};
     public static final List<String> listClassChieu = new ArrayList<String>() {{
-        add("7/1");
-        add("7/2");
-        add("7/3");
-        add("8/1");
-        add("8/2");
+        add("7A1");
+        add("7A2");
+        add("7A3");
+        add("7A4");
+        add("8A1");
+        add("8A2");
+        add("8A3");
     }};
     /**
      * listRuleDTO
